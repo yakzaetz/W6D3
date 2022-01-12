@@ -1,6 +1,6 @@
 class ArtworkSharesController < ApplicationController
     def create
-        as = ArtworkShare.new(params.require(:artworkshare).permit(:artist_id, :artwork_id))
+        as = ArtworkShare.new(params.require(:artworkshare).permit(:viewer_id, :artwork_id))
         if as #question for :artworkshare
             render json: as
         else

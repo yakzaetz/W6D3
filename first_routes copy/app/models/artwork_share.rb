@@ -2,7 +2,7 @@ class ArtworkShare < ApplicationRecord
     validates :artwork_id, uniqueness: true
     validates :viewer_id, uniqueness: true
 
-    belongs :viewer,
+    belongs_to :viewer,
     class_name: :User,
     primary_key: :id,
     foreign_key: :viewer_id
